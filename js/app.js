@@ -53,19 +53,10 @@ function generateCatalog() {
   new Product('assets/usb.gif', 'USB');
   new Product('assets/water-can.jpg', 'Water Can');
   new Product('assets/wine-glass.jpg', 'Wine Glass');
-  renderItems();
 }
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
-
-function renderItems() {
-  var items = document.querySelector('#items');
-  Product.allProducts.map(x => {
-    var option = getProductionOption(x);
-    items.appendChild(option);
-  });
-}
 
 function getProductionOption(product) {
   var optionEl = document.createElement('option');
